@@ -1,0 +1,54 @@
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2.3px #ff0000 ;
+    font-family: "Comic Sans MS";
+}
+body{
+    background-image: url("https://images5.alphacoders.com/714/thumb-1920-714862.jpg");
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 4% 4%;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.598);
+}
+p, h2{
+    visibility: hidden;
+}
+
+.fix{
+    visibility: visible;
+    word-wrap: normal;
+}
+.s{
+    visibility: visible;
+}
+.flexb{
+    width: 50%;
+    height: 50%;
+    padding: 2% 3%;
+    opacity: 60;
+}
+
+button{
+    border-radius: 8px;
+    background-color: rgb(183, 69, 183);
+    text-align: center;
+    color: white;
+    padding: 6px 8px;
+
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}

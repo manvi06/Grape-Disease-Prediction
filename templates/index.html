@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Disease Prediction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <h1>Grape Leaf Disease Prediction</h1>
+    <div class="flex-container opa">
+      <div class="flexb">
+        <h2 class="fix">Vineyards and Grapes</h2>
+        <p class="fix">
+          Agriculture has been practiced since centuries. Also, much of the
+          economic growth of India depends on agriculture. In many regions of
+          India, most of the farmers practice very obsolete farming techniques.
+          Grape is a widely grown crop in India. Plant disease is one of the
+          crucial causes that reduces quantity and degrades quality of the
+          agricultural products. Ensuring high crop production yield is critical
+          in maintaining global food security. Prediction and Detection of
+          disease play a major role in the field of Agriculture. Therefore, it
+          is very necessary to predict the diseases in various parts of the
+          grape plant to ensure that a healthy end product is obtained by taking
+          necessary actions in time.
+        </p>
+      </div>
+      <div class="flexb">
+        {% if prediction =="Grape Esca" %}
+        <h2 class="s">Grape Esca</h2>
+        <p class="s">
+          Esca is a vascular wilt disease that attacks the perennial organs of
+          grapevines, producing extensive wood necrosis in the trunk and cordon
+          through the slow and systemic development of pathogenic fungi such as
+          Phaeomoniella chlamydospora, Phaeoacremonium minimum, Fomitiporia
+          mediterranea and Botryosphaeriaceae species. Esca is a complex
+          disease, involving various biotic factors (pathogenic fungi), and
+          abiotic factors possibly associated with cultural practices. Fungal
+          colonization of the wood can reach a critical point when the
+          functional tissues are severely damaged, thus possibly interfering
+          with the vine physiology, leading to Esca-foliar symptom expression
+          and/or ultimately to plant death. Parameters such as type of cultivar,
+          pruning methods, climate are frequently listed as factors affecting
+          the development of Esca.
+        </p>
+        <br />
+        <a
+          href="https://plantix.net/en/library/plant-diseases/100140/esca"
+          target="_blank"
+          >More Information & Treatment</a
+        >
+
+        {% elif prediction =="Black Rot" %}
+        <h2 class="s">Black Rot</h2>
+        <p class="s">
+          Black rot is one of the most damaging diseases of grapes in Ohio and
+          other northeastern states. The disease is caused by the fungus
+          Guignardia bidwellii. The fungus can infect the leaves, shoots,
+          berries, tendrils, rachises and cluster stems (peduncles) of grapes.
+          If the disease is not managed early in the season, the impact on grape
+          clusters can be devastating, resulting in complete crop losses.
+          Disease development is favored by warm and humid weather. Symptoms of
+          black rot first appear as small yellow spots on leaves. Enlarged spots
+          (lesions) have a dark brownish-red border with tan to dark brown
+          centers (Figure 1). As the infection develops, tiny black dots appear
+          in the lesion, usually in a ring pattern near the border of the
+          lesion. These dots are fungal structures (pycnidia), which contain
+          thousands of spores (conidia) that can infect new tissue. New
+          infections can occur in less than 10 hours at temperatures between 60
+          to 85 degrees Fahrenheit.
+        </p>
+        <a
+          href="https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/diseases/fruit-spots/black-rot-of-grapes.aspx#:~:text=Black%20Rot%20of%20Grapes&text=Black%20rot%2C%20caused%20by%20the,stems%2C%20tendrils%2C%20and%20fruit."
+          target="_blank"
+          >More Information & Treatment</a
+        >
+        {% elif prediction =="Grape Healthy" %}
+        <h2 class="s">Grape Healthy</h2>
+        <p class="s">
+          Grapes are a type of fruit that grow in clusters of 15 to 300, and can
+          be crimson, black, dark blue, yellow, green, orange, and pink. "White"
+          grapes are actually green in color, and are evolutionarily derived
+          from the purple grape. Mutations in two regulatory genes of white
+          grapes turn off production of anthocyanins, which are responsible for
+          the color of purple grapes.Anthocyanins and other pigment chemicals of
+          the larger family of polyphenols in purple grapes are responsible for
+          the varying shades of purple in red wines.Grapes are typically an
+          ellipsoid shape resembling a prolate spheroid. Raw grapes are 81%
+          water, 18% carbohydrates, 1% protein, and have negligible fat (table).
+          A 100-gram (3+1⁄2-ounce) reference amount of raw grapes supplies 288
+          kilojoules (69 kilocalories) of food energy and a moderate amount of
+          vitamin K (14% of the Daily Value), with no other micronutrients in
+          significant content.
+        </p>
+        <a
+          href="https://www.ugaoo.com/knowledge-center/how-to-grow-grape-vines/"
+          target="_blank"
+          >More Information & Treatment</a
+        >
+
+        {% elif prediction =="Leaf Blight" %}
+        <h2 class="s">Leaf Blight</h2>
+        <p class="s">
+          Bacterial blight of grapevine is a serious, chronic and systemic
+          disease of grapevine that affects commercially important cultivars. It
+          is caused by the bacterium Xylophilus ampelinus which survives in the
+          vascular tissues of infected plants. Severe infection of susceptible
+          cultivars can lead to a serious reduction in grapevine health and
+          major harvest losses. Bacterial blight can affect the leaf, petiole,
+          stem, root, shoot or flowers. Look for key symptoms such as linear
+          reddish-brown streaks that appear and expand upwards on the shoot,
+          darken, crack and develop into cankers. Shoots subsequently wilt,
+          droop and dry up and young shoots may develop pale yellowish-green
+          spots on the lowest internodes. Discolouration is less common on very
+          young shoots, but the whole shoot dies back. Stem cross-section
+          reveals tissue browning.
+        </p>
+        <a
+          href="https://www.goodfruit.com/11-tips-to-beat-grape-fungal-diseases/"
+          target="_blank"
+          >More Information & Treatment</a
+        >
+        {% endif %}
+      </div>
+      <div class="flexb">
+        <form
+          class="form-horizontal"
+          action="/submit"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div>
+            <h2 class="fix" for="pwd">Upload Your Image :</h2>
+            <br />
+            <div class="col-sm-10">
+              <input
+                type="file"
+                class="form-control"
+                name="my_image"
+                id="pwd"
+              />
+            </div>
+          </div>
+
+          <div>
+            <br />
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+          <br />
+        </form>
+
+        {% if prediction %}
+        <img src="{{img_path}}" height="250px" width="250px" />
+        <h2 class="fix">Prediction : <i> {{prediction}} </i></h2>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
