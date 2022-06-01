@@ -60,7 +60,7 @@ jupyter-client==6.1.7
 jupyter-console==6.2.0
 jupyter-core==4.6.3
 jupyterlab-pygments==0.1.1
-keras==2.8.2
+keras==2.8.0
 Keras-Preprocessing==1.1.2
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
