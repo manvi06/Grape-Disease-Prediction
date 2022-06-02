@@ -1,4 +1,5 @@
 ﻿absl-py
+Python==3.8.5
 altair
 appdirs
 argon2-cffi
@@ -110,7 +111,6 @@ pylint
 Pympler
 pyparsing
 pyrsistent
-python==3.8.5
 python-dateutil
 pytz
 pytz-deprecation-shim
