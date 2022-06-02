@@ -25,7 +25,6 @@ cycler
 decorator
 defusedxml
 distlib
-Django
 entrypoints
 filelock
 Flask
