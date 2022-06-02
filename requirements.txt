@@ -72,7 +72,6 @@ matplotlib
 mccabe
 missingno
 mistune
-mysql-connector-python
 nbclient
 nbconvert
 nbformat
@@ -155,10 +154,7 @@ tzdata
 tzlocal
 urllib3
 validators
-virtualenv
-virtualenvwrapper-win
 visions
-watchdog
 wcwidth
 webencodings
 Werkzeug
