@@ -1,5 +1,5 @@
 ﻿absl-py
-Python==3.8.10
+Python
 altair
 appdirs
 argon2-cffi
