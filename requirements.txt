@@ -1,5 +1,4 @@
 ﻿absl-py
-Python
 altair
 appdirs
 argon2-cffi
